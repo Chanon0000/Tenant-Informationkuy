@@ -21,6 +21,7 @@
           </div>
       </div>
     </nav>
+    
     <div class="shad"></div>
   <div class="user-profile">
   
@@ -55,8 +56,10 @@
 
 
     <!-- ปุ่มยืนยัน -->
-    
+    <div class="centered">
     <button @click="editProfile">ยืนยัน</button>
+  </div>
+  
   </div>
 </template>
 
@@ -75,19 +78,20 @@ export default {
   },
   methods: {
     editProfile() {
-      // เพิ่มโค้ดที่ต้องการทำเมื่อคลิกปุ่มแก้ไข
-      alert('กำลังเข้าสู่โหมดแก้ไขข้อมูลผู้ใช้');
+      // การจัดการเหตุการณ์เมื่อคลิกที่ปุ่ม
+      console.log('ยืนยัน');
     }
   }
 };
+
 </script>
 
 <style scoped>
 .user-profile {
   font-family: Arial, sans-serif;
-  margin: 0 auto;
+  margin:  auto;
   max-width: 600px;
-  padding: 20px;
+  padding: 10px;
 }
 
 section {
@@ -118,6 +122,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
 button:hover {
@@ -126,5 +131,11 @@ button:hover {
 .shad {
   background: linear-gradient(rgb(240, 240, 240), rgb(255, 255, 255)); /* Standard syntax */
   height: 20px;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10px; /* กำหนดความสูงของพื้นที่มองเห็น */
 }
 </style>
