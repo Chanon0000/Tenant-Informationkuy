@@ -1,18 +1,18 @@
 <template>
   <div class="user-profile">
-   
+ 
 
     <!-- ข้อมูลพื้นฐาน -->
     <section>
       <h2>ข้อมูลพื้นฐาน</h2>
       <div>
-        <p><strong>ชื่อ-สกุล:</strong> <span class="bold">{{ userProfile.name }}</span></p>
+        <p><strong>ชื่อ-สกุล:</strong> <span>{{ userProfile.name }}</span></p>
       </div>
     </section>
 
     <!-- เพศ -->
     <section>
-      
+     
       <div>
         <p><strong>เพศ:</strong> {{ userProfile.gender }}</p>
       </div>
@@ -20,7 +20,7 @@
 
     <!-- ข้อมูลติดต่อ -->
     <section>
-      
+     
       <div>
         <p><strong>อีเมล:</strong> {{ userProfile.email }}</p>
         <p><strong>เบอร์โทร:</strong> {{ userProfile.phone }}</p>
@@ -34,7 +34,11 @@
       <div>
         <p><strong>รหัสผ่าน:</strong> ********</p>
       </div>
+      
     </section>
+
+    <!-- ปุ่มแก้ไข -->
+    <button @click="editProfile">แก้ไข</button>
   </div>
 </template>
 
@@ -50,6 +54,12 @@ export default {
         address: null // ถ้าไม่มีที่อยู่ให้เป็น null
       }
     };
+  },
+  methods: {
+    editProfile() {
+      // เพิ่มโค้ดที่ต้องการทำเมื่อคลิกปุ่มแก้ไข
+      alert('กำลังเข้าสู่โหมดแก้ไขข้อมูลผู้ใช้');
+    }
   }
 };
 </script>
@@ -77,5 +87,22 @@ h2 {
 .bold {
   font-weight: bold;
 }
+
+.change-password {
+  color: #56F000;
+  cursor: pointer;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
 </style>
-<!-- ... -->
