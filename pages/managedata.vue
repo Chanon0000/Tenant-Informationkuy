@@ -56,6 +56,7 @@
     <!-- ปุ่มแก้ไข -->
     <button @click="editProfile">แก้ไข</button>
   </div>
+
 </template>
 
 <script>
